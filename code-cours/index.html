@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Memory Game</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+        </style>
+        
+
+</head>
+
+<body>
+    <div class="top-bar">
+        <h1>Hacker Memory Game</h1>
+        <h2>Score: <span id="the-score-display">0</span> coups</h2>
+        <h3>Record: <span id="the-highscore-display">0</span> coups <button class="btn" type="button" id="the-deleter-button">💣️</button></h3>
+    </div>
+
+    <div class="game-zone">
+        <div class="win-panel hidden" id="the-win-panel">
+            <div>
+                <div class="win-title">GAGNÉ ! ! !</div>
+                <div class="win-subtitle">en <span id="the-winscore-display"></span> coups</div>
+                <button type="button" class="btn" id="the-play-again-button">Rejouer</button>
+            </div>
+        </div>
+
+        <div class="deck" id="the-deck">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

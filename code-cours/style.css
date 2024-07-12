@@ -1,0 +1,155 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+ }
+ 
+button {
+    background: transparent;
+    color: inherit;
+}
+
+
+:root {
+    --couleur-victoire: #000500;
+    --couleur-texte: #91ff02;
+    --bordure-bouton: #000533;
+    --bordure-carte: #00ff00;
+    --fond-bouton: #005a05;
+    --fond-bouton-actif: #042500;
+    
+}
+
+body {
+    background: url(images/photohacker2.jpg) center/cover no-repeat;
+    color: var(--couleur-texte);
+    font-family: "Orbitron", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    cursor: crosshair;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    perspective: 2000px;
+    perspective-origin: 65% 35%;
+}
+
+h1 {
+    font-size:48px;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size:24px;
+    margin-bottom: 20px;
+    
+}
+
+h3 {
+    font-size:18px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    padding: 5px 7px;
+    border: solid 2px var(--couleur-texte);
+    border-radius: 4px;
+    background-color: var(--fond-bouton);
+    cursor: pointer;
+    transition: background 0.3s Linear;
+}
+
+.top-bar {
+   padding: 15px;
+   text-align: center;
+
+}
+
+.game-zone {
+    flex-grow: 1;
+}
+
+.win-panel {
+    background: black;
+    display: flex;
+    justify-content: center;
+    height: 50%;
+
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 90px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.win-title {
+    font-size: 52px;
+    margin-bottom: 20px;
+}
+
+.win-subtitle {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.deck {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 790px;
+    margin: 0 auto;
+
+}
+
+
+.btn:hover {
+    background-color: var(--fond-bouton-actif);
+}
+
+.card {
+    height: 150px;
+    width: 150px;
+    position: relative;
+    transition: transform 0.3s linear;
+    transform: rotateY(0);
+    
+}
+
+.card > div {
+    position: absolute;
+    border: 2px solid var(--bordure-carte); 
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: z-index 0.3s linear;                              
+    background: transparent center/cover no-repeat;  
+}                                                          
+
+div.image {
+   z-index: 1;
+   transform: rotateY(180deg);
+}
+
+
+div.back {
+    background-image: url('./images/photo-face.jpg');
+    z-index: 2;
+}
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card.flipped > div.image {
+    z-index: 2;
+}
+
+.card.flipped > div.back {
+    z-index: 1;
+}
+
